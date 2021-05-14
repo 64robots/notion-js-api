@@ -1,0 +1,30 @@
+{
+  "name": "notion-js-api",
+  "version": "0.0.1",
+  "description": "Vue integration for Notion API",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/64robots//notion-js-api.git"
+  },
+  "keywords": [
+    "vue",
+    "notion"
+  ],
+  "author": "64 Robots",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/64robots/notion-js-api/issues"
+  },
+  "homepage": "https://github.com/64robots//notion-js-api#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.2",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "node-fetch": "^2.6.1"
+  }
+}
