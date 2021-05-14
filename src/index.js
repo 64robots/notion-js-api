@@ -1,4 +1,4 @@
-import BlockResource from './resources/BlockReource'
+import BlockResource from './resources/BlockResource'
 import DatabaseResource from './resources/DatabaseResource'
 import PageResource from './resources/PageResource'
 
