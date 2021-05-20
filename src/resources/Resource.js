@@ -7,15 +7,20 @@ export default class Resource {
     this.token = token;
   }
 
-  async fetchResource(url, method = 'get', params = null) {
+  fetchResource(url, method = 'get', params = null) {
     const URL = `${this.NOTION_API_BASE_URI}/v1/${url}`
-    return await fetch(URL, {
+    return fetch(URL, {
       method,
       headers: {
         'Authorization': `Bearer ${this.token}`,
       },
-      body: params ? JSON.stringify(params): null
-    }).then(response => response.json())
+      body: params ? JSON.stringify(params) : null
+    }).then(response => {
+      if (!response.ok) {
+        return response.json().then(json => { throw json; });
+      }
+      return resolve(response.json())
+    })
   }
 
   async getResource(resourceType, resourceId) {
